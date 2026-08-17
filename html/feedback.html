@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Send feedback to XYZ." />
+    <title>Feedback</title>
+    <link rel="icon" href="../image/my-computer-windows-xp-icon.png" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="../index.html">
+          <img src="../image/header-logo.png" alt="XYZ" />
+        </a>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="registration.html">Registration</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <main>
+      <h2>XYZ Feedback Form</h2>
+      <p>Fields marked with * are required.</p>
+      <form name="feedback_form" id="feedback-form" action="/submit_feedback" method="post">
+        <dl>
+          <dt><label for="name">Name</label></dt>
+          <dd><input type="text" id="name" name="name" placeholder="Name" maxlength="50" autocomplete="name" /></dd>
+
+          <dt><label for="email">Email *</label></dt>
+          <dd><input type="email" id="email" name="email" placeholder="Email" maxlength="100" autocomplete="email" required /></dd>
+
+          <dt><label for="message">Your Feedback *</label></dt>
+          <dd><textarea id="message" name="message" placeholder="Feedback" cols="60" rows="6" maxlength="300" required></textarea></dd>
+        </dl>
+        <input type="reset" id="reset-feedback" value="Reset" />
+        <input type="submit" id="submit-feedback" value="Submit" />
+      </form>
+    </main>
+    <hr />
+    <footer>
+      <ul>
+        <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="feedback.html">Send Feedback</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Register to be a member of XYZ." />
+    <title>Registration</title>
+    <link rel="icon" href="../image/my-computer-windows-xp-icon.png" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="../index.html">
+          <img src="../image/header-logo.png" alt="XYZ" />
+        </a>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="registration.html">Registration</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <main>
+      <h2>XYZ Registration Form</h2>
+      <p>Fields marked with * are required.</p>
+      <form name="signup_form" id="signup-form" action="/submit_user" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Basic Information</legend>
+          <dl>
+            <dt><label for="username">Username *</label></dt>
+            <dd><input type="text" id="username" name="username" placeholder="Username" autocomplete="username" required autofocus /></dd>
+
+            <dt><label for="email">Email *</label></dt>
+            <dd><input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required /></dd>
+
+            <dt><label for="password">Password *</label></dt>
+            <dd><input type="password" id="password" name="password" placeholder="Password" minlength="8" maxlength="32" autocomplete="new-password" required /></dd>
+
+            <dt><label for="password-confirm">Confirm Password *</label></dt>
+            <dd><input type="password" id="password-confirm" name="password_confirm" placeholder="Confirm Password" minlength="8" maxlength="32" autocomplete="new-password" required /></dd>
+          </dl>
+        </fieldset>
+
+        <fieldset>
+          <legend>Other Information</legend>
+          <dl>
+            <dt><label for="country">Country</label></dt>
+            <dd>
+              <select id="country" name="country">
+                <option value="" disabled selected hidden>Select</option>
+                <option value="au">Australia</option>
+                <option value="ca">Canada</option>
+                <option value="eg">Egypt</option>
+                <option value="de">Germany</option>
+                <option value="jp">Japan</option>
+                <option value="sa">Saudi Arabia</option>
+                <option value="kr">South Korea</option>
+                <option value="ae">United Arab Emirates</option>
+                <option value="gb">United Kingdom</option>
+                <option value="us">United States</option>
+              </select>
+            </dd>
+
+            <dt><label>Gender</label></dt>
+            <dd>
+              <input type="radio" id="gender-male" name="gender" value="male" />
+              <label for="gender-male">Male</label>
+
+              <input type="radio" id="gender-female" name="gender" value="female" />
+              <label for="gender-female">Female</label>
+
+              <input type="radio" id="gender-other" name="gender" value="other" />
+              <label for="gender-other">Other</label>
+            </dd>
+
+            <dt><label for="birth-date">Date of Birth</label></dt>
+            <dd><input type="date" id="birth-date" name="birth_date" min="1900-01-01" max="2013-01-01" /></dd>
+
+            <dt><label for="profile-image">Profile Image</label></dt>
+            <dd><input type="file" id="profile-image" name="profile_image" accept="image/*" /></dd>
+
+            <dt><label for="steam-link">Steam Account Link</label></dt>
+            <dd><input type="url" id="steam-link" name="steam_link" placeholder="Link" /></dd>
+
+            <dt><label>Games</label></dt>
+            <dd>
+              <input type="checkbox" id="lobotomy-corporation" name="games" value="lobotomy_corporation" />
+              <label for="lobotomy-corporation">Lobotomy Corporation</label>
+              <br />
+              <input type="checkbox" id="library-of-ruina" name="games" value="library_of_ruina" />
+              <label for="library-of-ruina">Library of Ruina</label>
+              <br />
+              <input type="checkbox" id="limbus-company" name="games" value="limbus_company" />
+              <label for="limbus-company">Limbus Company</label>
+              <br />
+            </dd>
+          </dl>
+        </fieldset>
+        <input type="checkbox" id="terms-and-conditions" name="terms_and_conditions" value="accepted" required />
+        <label for="terms-and-conditions">
+          I agree to the
+          <a href="terms-and-conditions.html">Terms and Conditions</a>
+          and
+          <a href="privacy-policy.html">Privacy Policy</a>
+          of XYZ.
+        </label>
+        <br /><br />
+        <input type="reset" id="reset" value="Reset" />
+        <input type="submit" id="submit" value="Submit" />
+      </form>
+    </main>
+    <hr />
+    <footer>
+      <ul>
+        <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="feedback.html">Send Feedback</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
